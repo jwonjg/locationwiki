@@ -2,16 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/locationwiki
+    destination: /home/ec2-user/app/git/locationwiki
 hooks:
-  AfterInstall:
-    - location: scripts/build
-      timeout: 180
-      runas: ec2-user
-    - location: scripts/move
-      timeout: 30
-      runas: ec2-user
   ApplicationStart:
-    - location: scripts/restart
-      timeout: 30
+    - location: /home/ec2-user/app/git/deploy.sh
+      timeout: 180
       runas: ec2-user
