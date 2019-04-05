@@ -1,0 +1,17 @@
+echo "restart project"
+
+cd /home/ec2-user/codedeploy/locationwiki
+
+CURRENT_PID=$(pgrep -f locationwiki)
+
+if [ -z $CURRENT_PID ]; then
+else
+    echo "- stop project"
+    kill -2 $CURRENT_PID
+    sleep 5
+fi
+
+echo "- start project"
+
+JAR_NAME=$(ls | grep 'locationwiki' | tail -n 1)
+nohup java -jar ./$JAR_NAME &
