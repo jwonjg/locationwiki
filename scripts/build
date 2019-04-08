@@ -1,4 +1,4 @@
 echo "build project"
 
-cd /home/ec2-user/codedeploy/locationwiki
+cd /var/www/locationwiki
 ./gradlew clean build

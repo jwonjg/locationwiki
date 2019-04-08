@@ -1,4 +1,4 @@
 echo "move jar"
 
-cd /home/ec2-user/codedeploy/locationwiki
+cd /var/www/locationwiki
 cp ./build/libs/*.jar ./

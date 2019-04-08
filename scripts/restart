@@ -1,6 +1,6 @@
 echo "restart project"
 
-cd /home/ec2-user/codedeploy/locationwiki
+cd /var/www/locationwiki
 
 CURRENT_PID=$(pgrep -f locationwiki)
 
