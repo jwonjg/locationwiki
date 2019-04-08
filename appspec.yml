@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/locationwiki
+    destination: /home/ec2-user/locationwiki
 hooks:
   AfterInstall:
   - location: scripts/build

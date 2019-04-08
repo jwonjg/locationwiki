@@ -1,6 +1,6 @@
 echo "restart project"
 
-cd /var/www/locationwiki
+cd /home/ec2-user/locationwiki
 
 CURRENT_PID=$(pgrep -f locationwiki)
 
