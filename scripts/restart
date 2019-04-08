@@ -4,8 +4,7 @@ cd /home/ec2-user/locationwiki
 
 CURRENT_PID=$(pgrep -f locationwiki)
 
-if [ -z $CURRENT_PID ]; then
-else
+if [ -n $CURRENT_PID ]; then
     echo "- stop project"
     kill -2 $CURRENT_PID
     sleep 5
